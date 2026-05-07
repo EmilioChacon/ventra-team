@@ -1,12 +1,11 @@
 const teamMembers = [
   {
     nombre: 'Emilio De La Peña Chacón',
-    rol: 'Desarrollador Full Stack',
-    github: 'https://github.com/EmilioChaconx',
+    rol: 'SCRUM Master & Desarrollador backend',
+    github: 'https://github.com/EmilioChacon',
     linkedin: 'https://www.linkedin.com/in/emilio-dlp-chacon/',
     portfolio: 'https://emiliochacon.dev/',
-    imagen: 'emilio.jpeg',
-    descripcion: 'Creador de experiencias digitales modernas, con enfoque en detalle, accesibilidad y rendimiento.'
+    imagen: 'emilio.jpeg'
   },
   {
     nombre: 'Team Member',
@@ -14,8 +13,7 @@ const teamMembers = [
     github: '#',
     linkedin: '#',
     portfolio: '#',
-    imagen: '',
-    descripcion: 'Placeholder para información del miembro del equipo. Reemplaza con datos reales cuando estés listo.'
+    imagen: ''
   },
   {
     nombre: 'Team Member',
@@ -23,8 +21,7 @@ const teamMembers = [
     github: '#',
     linkedin: '#',
     portfolio: '#',
-    imagen: '',
-    descripcion: 'Placeholder para información del miembro del equipo. Reemplaza con datos reales cuando estés listo.'
+    imagen: ''
   },
   {
     nombre: 'Team Member',
@@ -32,8 +29,7 @@ const teamMembers = [
     github: '#',
     linkedin: '#',
     portfolio: '#',
-    imagen: '',
-    descripcion: 'Placeholder para información del miembro del equipo. Reemplaza con datos reales cuando estés listo.'
+    imagen: ''
   },
   {
     nombre: 'Team Member',
@@ -41,16 +37,18 @@ const teamMembers = [
     github: '#',
     linkedin: '#',
     portfolio: '#',
-    imagen: '',
-    descripcion: 'Placeholder para información del miembro del equipo. Reemplaza con datos reales cuando estés listo.'
+    imagen: ''
   }
 ];
 
 const teamContainer = document.getElementById('team-container');
 
-function createLink(label, href) {
+function createLink(label, href, isPrimaryCTA = false) {
   const anchor = document.createElement('a');
   anchor.className = 'team-link';
+  if (isPrimaryCTA) {
+    anchor.classList.add('cta-primary');
+  }
   anchor.href = href;
   anchor.target = '_blank';
   anchor.rel = 'noreferrer noopener';
@@ -83,13 +81,10 @@ function renderTeam() {
     role.className = 'team-role';
     role.textContent = member.rol;
 
-    const description = document.createElement('p');
-    description.className = 'team-description';
-    description.textContent = member.descripcion;
-
-    const links = document.createElement('div');
-    links.className = 'team-links';
-
+    const isEmilio = member.nombre === 'Emilio De La Peña Chacón';
+    links.appendChild(createLink('GitHub', member.github));
+    links.appendChild(createLink('LinkedIn', member.linkedin));
+    links.appendChild(createLink('Portfolio', member.portfolio, isEmi
     links.appendChild(createLink('GitHub', member.github));
     links.appendChild(createLink('LinkedIn', member.linkedin));
     links.appendChild(createLink('Portfolio', member.portfolio));
@@ -97,7 +92,6 @@ function renderTeam() {
     card.appendChild(avatar);
     card.appendChild(name);
     card.appendChild(role);
-    card.appendChild(description);
     card.appendChild(links);
     fragment.appendChild(card);
   });
