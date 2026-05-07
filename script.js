@@ -81,13 +81,13 @@ function renderTeam() {
     role.className = 'team-role';
     role.textContent = member.rol;
 
+    const links = document.createElement('div');
+    links.className = 'team-links';
+
     const isEmilio = member.nombre === 'Emilio De La Peña Chacón';
     links.appendChild(createLink('GitHub', member.github));
     links.appendChild(createLink('LinkedIn', member.linkedin));
-    links.appendChild(createLink('Portfolio', member.portfolio, isEmi
-    links.appendChild(createLink('GitHub', member.github));
-    links.appendChild(createLink('LinkedIn', member.linkedin));
-    links.appendChild(createLink('Portfolio', member.portfolio));
+    links.appendChild(createLink('Portfolio', member.portfolio, isEmilio));
 
     card.appendChild(avatar);
     card.appendChild(name);
