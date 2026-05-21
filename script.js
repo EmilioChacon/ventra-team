@@ -11,7 +11,7 @@ const teamMembers = [
     nombre: 'Santiago Regidor',
     rol: 'Desarrollador frontend',
     linkedin: '#',
-    cv: 'Currículum_Santiago_Regidor.pdf',
+    cv: 'CV_Santiago.pdf',
     imagen: ''
   },
   {
