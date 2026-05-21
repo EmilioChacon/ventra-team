@@ -8,36 +8,35 @@ const teamMembers = [
     imagen: 'emilio.jpeg'
   },
   {
-    nombre: 'Team Member',
+    nombre: 'Santiago Regidor',
     rol: 'Diseñador UX/UI',
-    github: '#',
     linkedin: '#',
-    portfolio: '#',
-    imagen: ''
+    cv: 'Currículum_ santiago.pdf',
+    imagen: 'santiago.jpeg'
   },
   {
-    nombre: 'Team Member',
+    nombre: 'Rafael Sánchez',
     rol: 'Estratega Digital',
-    github: '#',
-    linkedin: '#',
-    portfolio: '#',
-    imagen: ''
+    github: 'https://github.com/KingMapachelo',
+    linkedin: 'https://www.linkedin.com/in/rafael-s%C3%A1nchez-mart%C3%ADnez-0077b23b3/',
+    cv: 'CV Rafael Sánchez.pdf',
+    imagen: 'rafael.jpeg'
   },
   {
-    nombre: 'Team Member',
+    nombre: 'Javier Galán',
     rol: 'Ingeniero de Calidad',
-    github: '#',
-    linkedin: '#',
-    portfolio: '#',
-    imagen: ''
+    github: 'https://github.com/JavGalGas',
+    linkedin: 'https://www.linkedin.com/in/javier-galan-360748351/',
+    imagen: 'javier.jpeg'
   },
   {
-    nombre: 'Team Member',
+    nombre: 'Sonia Perez',
     rol: 'Gestor de Proyectos',
-    github: '#',
-    linkedin: '#',
-    portfolio: '#',
-    imagen: ''
+    github: 'https://github.com/soniaaperez',
+    linkedin: 'https://www.linkedin.com/in/sonia-pérez-simarro-032098331',
+    portfolio: 'https://soniaperezsimarro.vercel.app',
+    cv: 'CV_Sonia.pdf',
+    imagen: 'sonia.jpeg'
   }
 ];
 
@@ -85,9 +84,19 @@ function renderTeam() {
     links.className = 'team-links';
 
     const isEmilio = member.nombre === 'Emilio De La Peña Chacón';
-    links.appendChild(createLink('GitHub', member.github));
-    links.appendChild(createLink('LinkedIn', member.linkedin));
-    links.appendChild(createLink('Portfolio', member.portfolio, isEmilio));
+    
+    if (member.github) {
+      links.appendChild(createLink('GitHub', member.github));
+    }
+    if (member.linkedin) {
+      links.appendChild(createLink('LinkedIn', member.linkedin));
+    }
+    if (member.portfolio) {
+      links.appendChild(createLink('Portfolio', member.portfolio, isEmilio));
+    }
+    if (member.cv) {
+      links.appendChild(createLink('CV', member.cv));
+    }
 
     card.appendChild(avatar);
     card.appendChild(name);
