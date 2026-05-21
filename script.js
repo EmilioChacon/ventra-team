@@ -12,7 +12,7 @@ const teamMembers = [
     rol: 'Desarrollador frontend',
     linkedin: '#',
     cv: 'CV_Santiago.pdf',
-    imagen: ''
+    imagen: 'Santi.jpeg'
   },
   {
     nombre: 'Rafael Sánchez',
