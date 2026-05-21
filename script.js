@@ -9,34 +9,34 @@ const teamMembers = [
   },
   {
     nombre: 'Santiago Regidor',
-    rol: 'Diseñador UX/UI',
+    rol: 'Desarrollador frontend',
     linkedin: '#',
-    cv: 'Currículum_ santiago.pdf',
-    imagen: 'santiago.jpeg'
+    cv: 'Currículum_Santiago_Regidor.pdf',
+    imagen: ''
   },
   {
     nombre: 'Rafael Sánchez',
-    rol: 'Estratega Digital',
+    rol: 'Desarrollador fullstack',
     github: 'https://github.com/KingMapachelo',
     linkedin: 'https://www.linkedin.com/in/rafael-s%C3%A1nchez-mart%C3%ADnez-0077b23b3/',
-    cv: 'CV Rafael Sánchez.pdf',
-    imagen: 'rafael.jpeg'
+    cv: 'CVRafaelSanchez.pdf',
+    imagen: 'RafaelSanchez.jpg'
   },
   {
     nombre: 'Javier Galán',
-    rol: 'Ingeniero de Calidad',
+    rol: 'Desarrollador backend',
     github: 'https://github.com/JavGalGas',
     linkedin: 'https://www.linkedin.com/in/javier-galan-360748351/',
-    imagen: 'javier.jpeg'
+    imagen: 'javier.jpg'
   },
   {
     nombre: 'Sonia Perez',
-    rol: 'Gestor de Proyectos',
+    rol: 'Desarrolladora Fullstack',
     github: 'https://github.com/soniaaperez',
     linkedin: 'https://www.linkedin.com/in/sonia-pérez-simarro-032098331',
     portfolio: 'https://soniaperezsimarro.vercel.app',
     cv: 'CV_Sonia.pdf',
-    imagen: 'sonia.jpeg'
+    imagen: 'sonia.jpg'
   }
 ];
 
